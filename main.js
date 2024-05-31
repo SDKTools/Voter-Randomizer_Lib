@@ -1,10 +1,3 @@
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
 function mostFrequentElement(arr) {
     if (arr.length === 0) {
         return null;
@@ -121,52 +114,7 @@ class VoteAlgorithm {
 }
 
 
-let bot = new VoteAlgorithm(10, []);
-for (let i = 1; i < 10; i++) {
-    for (let x = 1; x <= 10; x++) {
-        let trainList = [];
-        for (let y = 1; y <= 6; y++) {
-            trainList.push((i * x).toString());
-            for (let z of bot.voters) {
-                z.options.push((i * x).toString());
-            }
-        }
-
-        for (let y = 1; y <= 2; y++) {
-            trainList.push((i * x - 1).toString());
-            for (let z of bot.voters) {
-                z.options.push((i * x - 1).toString());
-            }
-        }
-
-        for (let y = 1; y <= 2; y++) {
-            trainList.push((i * x + 1).toString());
-            for (let z of bot.voters) {
-                z.options.push((i * x + 1).toString());
-            }
-        }
-
-        let tabuada = i.toString() + "*" + x.toString();
-        console.log(tabuada + ": " + trainList.toString());
-        bot.train(tabuada, trainList);
-    }
-}
-function askQuestion(query) {
-    return new Promise(resolve => rl.question(query, resolve));
-}
-
-async function loop() {
-    let answer = await askQuestion("Input: ");
-    console.log(bot.respond(answer));
-
-    let correct = await askQuestion("Is correct?(Y/N/Exit): ");
-    if (correct == "Y") {
-        bot.last_answer_correct(true);
-    } else if (correct == "Exit") {
-        rl.close();
-        return;
-    }
-    loop();
-}
-
-loop();
+module.exports = {
+    Voter,
+    VoteAlgorithm
+};
