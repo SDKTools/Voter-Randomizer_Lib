@@ -1,3 +1,3 @@
 # Voter-Randomizer_Lib
-i created a new machine learning algorithm
+I created a new machine learning algorithm, see my phrase: 
 "If voting is used vor so many things like tournaments, and others... Why ins't used in a machine learning concept" - myself
