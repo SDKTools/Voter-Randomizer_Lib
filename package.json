@@ -1,0 +1,19 @@
+{
+  "name": "voter-randomizer-lib",
+  "version": "1.0.0",
+  "description": "I created a new machine learning algorithm, see my phrase: \"If voting is used for so many things like tournaments, and others... Why ins't used in a machine learning concept\" - myself",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDKTools/Voter-Randomizer_Lib.git"
+  },
+  "author": "Just_a_RandomDev",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/SDKTools/Voter-Randomizer_Lib/issues"
+  },
+  "homepage": "https://github.com/SDKTools/Voter-Randomizer_Lib#readme"
+}
